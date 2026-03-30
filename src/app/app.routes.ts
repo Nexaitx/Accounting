@@ -8,11 +8,20 @@ import { Payroll } from './payroll/payroll';
 import { Tax } from './tax/tax';
 import { RdTax } from './rd-tax/rd-tax';
 import { Backoffice } from './backoffice/backoffice';
+import { About } from './about/about';
+import { Contact } from './contact/contact';
+import { Blogs } from './blogs/blogs';
+import { CaseStudy } from './case-study/case-study';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: Home },
     { path: 'pricing', component: Pricing },
+
+    { path: 'about-us', component: About },
+    { path: 'contact-us', component: Contact },
+    { path: 'case-study', component: CaseStudy },
+    { path: 'blogs', component: Blogs },
 
     { path: 'services/bookkeeping', component: Bookkeeping },
     { path: 'services/cfo-advisory', component: Cfo },

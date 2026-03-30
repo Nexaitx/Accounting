@@ -1,0 +1,46 @@
+/* HERO */
+.blog-hero {
+  height: 60vh;
+  background: linear-gradient(135deg, #6f42c1, #9b59b6);
+}
+
+/* FEATURED */
+.featured-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+}
+
+/* BLOG CARD */
+.blog-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* READ MORE */
+.read-more {
+  text-decoration: none;
+  color: #6f42c1;
+  font-weight: 500;
+}
+
+/* SIDEBAR */
+.sidebar-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* NEWSLETTER */
+.newsletter {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #5a32a3, #8e44ad);
+}

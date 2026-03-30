@@ -1,0 +1,87 @@
+<section class="blog-hero text-white d-flex align-items-center">
+    <div class="container">
+        <h1 class="fw-bold display-4">Insights & Resources</h1>
+        <p class="lead">Learn about finance, tax, and growth strategies</p>
+
+        <div class="featured-card mt-4 p-4">
+            <span class="badge bg-light text-dark">Featured</span>
+            <h3 class="mt-2">How CFO Strategy Can 3X Your Growth</h3>
+            <p>Discover how businesses scale with financial planning</p>
+            <button class="btn btn-primary rounded-pill">Read More</button>
+        </div>
+    </div>
+</section>
+
+<div class="container my-4 text-center">
+    <div class="btn-group rounded-pill bg-light p-1">
+
+        <button class="btn rounded-pill mx-1" [ngClass]="activeCategory === 'all' ? 'btn-primary' : 'btn-light'"
+            (click)="setCategory('all')">
+            All
+        </button>
+
+        <button class="btn rounded-pill mx-1" [ngClass]="activeCategory === 'bookkeeping' ? 'btn-primary' : 'btn-light'"
+            (click)="setCategory('bookkeeping')">
+            Bookkeeping
+        </button>
+
+        <button class="btn rounded-pill mx-1" [ngClass]="activeCategory === 'tax' ? 'btn-primary' : 'btn-light'"
+            (click)="setCategory('tax')">
+            Tax
+        </button>
+
+        <button class="btn rounded-pill mx-1" [ngClass]="activeCategory === 'cfo' ? 'btn-primary' : 'btn-light'"
+            (click)="setCategory('cfo')">
+            CFO
+        </button>
+
+        <button class="btn rounded-pill mx-1" [ngClass]="activeCategory === 'startup' ? 'btn-primary' : 'btn-light'"
+            (click)="setCategory('startup')">
+            Startup
+        </button>
+
+    </div>
+</div>
+
+<div class="container py-4">
+    <div class="container py-4">
+        <div class="row g-4">
+
+            <div class="col-md-4 col-sm-6" *ngFor="let blog of filteredBlogs">
+
+                <div class="blog-card">
+
+                    <img [src]="blog.image" class="img-fluid rounded-top">
+
+                    <div class="p-3">
+                        <span class="badge bg-light text-dark text-capitalize">
+                            {{ blog.category }}
+                        </span>
+
+                        <h5 class="mt-2">{{ blog.title }}</h5>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small>{{ blog.readTime }}</small>
+                            <a href="#" class="read-more">Read →</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<section class="newsletter text-center text-white">
+    <div class="container">
+        <h2 class="fw-bold text-light">Stay Updated</h2>
+        <p>Get weekly finance insights</p>
+
+        <div class="d-flex justify-content-center">
+            <input type="email" class="form-control w-50" placeholder="Enter email">
+            <button class="btn btn-light ms-2">Subscribe</button>
+        </div>
+    </div>
+</section>

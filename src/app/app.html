@@ -38,12 +38,8 @@
     <a class="navbar-brand" href="#">Accounting</a>
 
     <!-- Toggle button -->
-    <button class="navbar-toggler" type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#ftco-nav" 
-      aria-controls="ftco-nav"
-      aria-expanded="false" 
-      aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav"
+      aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
     </button>
 
@@ -52,73 +48,68 @@
 
       <!-- Center menu -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
-        <li class="nav-item active">
+        <li class="nav-item"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" routerLink="home">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/about-us">About</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li> -->
-        <li class="nav-item dropdown position-relative">
 
-  <a class="nav-link fw-bold dropdown-toggle"
-     href="#"
-     role="button"
-     data-bs-toggle="dropdown">
-    Services
-  </a>
+        <li class="nav-item dropdown position-relative" routerLinkActive="active">
 
-  <!-- Custom Dropdown -->
-  <div class="dropdown-menu custom-dropdown p-4 shadow border-0">
+          <a class="nav-link fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Services
+          </a>
 
-    <div class="service-item" routerLink="/services/bookkeeping">
-      <div class="icon blue"><i class="fas fa-book-open"></i></div>
-      <span>Bookkeeping</span>
-    </div>
+          <!-- Custom Dropdown -->
+          <div class="dropdown-menu custom-dropdown p-4 shadow border-0">
 
-    <div class="service-item" routerLink="/services/cfo-advisory">
-      <div class="icon orange"><i class="fas fa-chart-bar"></i></div>
-      <span>CFO Advisory</span>
-    </div>
+            <div class="service-item" routerLink="/services/bookkeeping" routerLinkActive="active">
+              <div class="icon blue"><i class="fas fa-book-open"></i></div>
+              <span>Bookkeeping</span>
+            </div>
 
-    <div class="service-item" routerLink="/services/payroll-hr">
-      <div class="icon green"><i class="fas fa-users"></i></div>
-      <span>Payroll & HR</span>
-    </div>
+            <div class="service-item" routerLink="/services/cfo-advisory" routerLinkActive="active">
+              <div class="icon orange"><i class="fas fa-chart-bar"></i></div>
+              <span>CFO Advisory</span>
+            </div>
 
-    <div class="service-item" routerLink="/services/tax">
-      <div class="icon gray"><i class="fas fa-university"></i></div>
-      <span>Tax</span>
-    </div>
+            <div class="service-item" routerLink="/services/payroll-hr" routerLinkActive="active">
+              <div class="icon green"><i class="fas fa-users"></i></div>
+              <span>Payroll & HR</span>
+            </div>
 
-    <!-- Sub item -->
-    <div class="sub-item ms-5" routerLink="/services/rd-tax-credit">
-      R & D Tax Credit
-    </div>
+            <div class="service-item" routerLink="/services/tax" routerLinkActive="active">
+              <div class="icon gray"><i class="fas fa-university"></i></div>
+              <span>Tax</span>
+            </div>
 
-    <div class="service-item" routerLink="/services/back-office">
-      <div class="icon blue"><i class="fas fa-network-wired"></i></div>
-      <span>Back-Office</span>
-    </div>
+            <!-- Sub item -->
+            <div class="sub-item ms-5" routerLink="/services/rd-tax-credit"  routerLinkActive="active">
+              R & D Tax Credit
+            </div>
 
-  </div>
+            <div class="service-item" routerLink="/services/back-office"  routerLinkActive="active">
+              <div class="icon blue"><i class="fas fa-network-wired"></i></div>
+              <span>Back-Office</span>
+            </div>
 
-</li>
-        <li class="nav-item">
+          </div>
+
+        </li>
+        <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="/pricing">Pricing</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Case Study</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/case-study">Case Study</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/blogs">Blog</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/contact-us">Contact</a>
         </li>
-      </ul>      
+      </ul>
 
     </div>
   </div>
@@ -133,7 +124,8 @@
         <div class="row">
           <div class="col-md-4 mb-md-0 mb-4">
             <h2 class="footer-heading">About us</h2>
-            <p class="text-white">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p class="text-white">A small river named Duden flows by their place and supplies it with the necessary
+              regelialia.</p>
             <ul class="ftco-footer-social p-0">
               <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span
                     class="fa-brands footer-icon fa-twitter"></span></a></li>
@@ -159,10 +151,10 @@
                   <div class="col-md-4 mb-md-0 mb-4">
                     <h2 class="footer-heading">Discover</h2>
                     <ul class="list-unstyled">
-                      <li><a href="#" class="py-1 d-block">About us</a></li>
-                      <li><a href="#" class="py-1 d-block">Contract us</a></li>
-                      <li><a href="#" class="py-1 d-block">Terms &amp; Conditions</a></li>
-                      <li><a href="#" class="py-1 d-block">Policies</a></li>
+                      <li><a routerLink="/about-us" class="py-1 d-block">About us</a></li>
+                      <li><a routerLink="/contact-us" class="py-1 d-block">Contact us</a></li>
+                      <li><a routerLink="/pricing" class="py-1 d-block">Pricing</a></li>
+                      <li><a routerLink="/blogs" class="py-1 d-block">Blogs</a></li>
                     </ul>
                   </div>
                   <div class="col-md-4 mb-md-0 mb-4">

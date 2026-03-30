@@ -1,3 +1,66 @@
 .slider-text h2 {
     color: #1ba12d;
 }
+
+.about-home {
+    background: #f8f9ff;
+}
+
+/* IMAGE WRAPPER */
+.about-img-wrapper {
+    position: relative;
+}
+
+/* MAIN IMAGE */
+.main-img {
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.main-img:hover {
+    transform: scale(1.05);
+}
+
+/* FLOATING CARD */
+.floating-card {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* MINI FEATURES */
+.mini-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.mini-card i {
+    color: #6f42c1;
+}
+
+.mini-card:hover {
+    transform: translateY(-3px);
+}
+
+/* BUTTON */
+.btn-primary {
+    background: linear-gradient(135deg, #6f42c1, #9b59b6);
+    border: none;
+}
+
+.subheading {
+    font-weight: 600;
+    color: #1ba12d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
