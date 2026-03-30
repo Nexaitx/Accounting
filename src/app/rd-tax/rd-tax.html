@@ -1,0 +1,153 @@
+<section class="hero-section text-center text-white d-flex align-items-center">
+    <div class="container">
+        <h1 class="fw-bold display-4 service-heading">R&D Tax Credits</h1>
+        <p class="lead mt-3">
+            Maximize your research and development tax benefits.
+        </p>
+        <p><i>Assistance for Startups to Claim the R&D Tax Credit</i></p>
+
+        <div class="mt-4">
+            <button class="btn btn-light btn-lg rounded-pill px-4 me-2">
+                Get Started
+            </button>
+            <button class="btn btn-outline-light btn-lg rounded-pill px-4">
+                Book Demo
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">What you get</h2>
+            <p class="text-muted">Powerful features designed for growth</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="premium-card">
+                    <div class="icon-box bg-primary">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5>R&D Tax Credit Optimization</h5>
+                    <p>Maximize your research and development tax benefits.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="premium-card">
+                    <div class="icon-box bg-success">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h5>
+                        Cash Flow Benefits
+                    </h5>
+                    <p>
+                        Access cash flow benefits from R&D tax credits to reinvest in your business.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="premium-card">
+                    <div class="icon-box bg-warning">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5>
+                        Expert Guidance
+                    </h5>
+                    <p>
+                        Our team of experts will guide you through the R&D tax credit process to ensure you receive the
+                        maximum benefit.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">R&D Tax Credit Calculator</h1>
+        <p class="text-muted">Estimate savings from wages & contractors</p>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+
+            <div class="card shadow-lg border-0 p-4">
+
+                <!-- Wages -->
+                <div class="mb-3">
+                    <label class="form-label">R&D Employee Wages</label>
+                    <input type="number" class="form-control" [(ngModel)]="wages">
+                </div>
+
+                <!-- Contractors -->
+                <div class="mb-3">
+                    <label class="form-label">Contractor Costs</label>
+                    <input type="number" class="form-control" [(ngModel)]="contractors">
+                </div>
+
+                <!-- R&D % -->
+                <div class="mb-3">
+                    <label class="form-label">% Time Spent on R&D</label>
+                    <input type="number" class="form-control" [(ngModel)]="rdPercentage">
+                </div>
+
+                <!-- Button -->
+                <button class="btn btn-primary w-100 rounded-pill mt-3" (click)="calculate()">
+                    Calculate Savings
+                </button>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <!-- Result -->
+            <div class="result-box mt-4 py-5 text-center">
+                <h5>Estimated Savings</h5>
+                <p>Your Annual Estimated R & D Tax Credit</p>
+                <h2 class="fw-bold text-success">
+                    ₹ {{ credit || 0 | number }}
+                </h2>
+                <small>* Savings can be applied against income taxes or payroll taxes</small>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3 class="fw-bold">What is the R&D Tax credit?</h3>
+                <p>The R&D Tax Credit (Research & Development Tax Credit) is a government incentive designed to reward
+                    businesses for investing in innovation—like building new products, improving processes, or
+                    developing software.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="../../assets/rnd.jpg" class="img-fluid w-50" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section text-center text-white">
+    <div class="container">
+        <h2 class="fw-bold text-light">Ready to grow your business?</h2>
+        <p class="mb-4">Start your journey with us today.</p>
+
+        <button class="btn btn-light btn-lg rounded-pill px-5">
+            Get Started
+        </button>
+    </div>
+</section>

@@ -5954,3 +5954,56 @@ textarea.form-control {
     left: 5px;
 
 }
+
+
+/* HERO */
+.hero-section {
+  height: 70vh;
+  background: linear-gradient(135deg, #6f42c1, #9b59b6);
+  position: relative;
+}
+
+/* CARD */
+.premium-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.premium-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* ICON */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 22px;
+}
+
+/* PROCESS */
+.process-step span {
+  font-size: 40px;
+  font-weight: bold;
+  color: #6f42c1;
+}
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, #5a32a3, #8e44ad);
+  padding: 80px 0;
+}
+
+.service-heading {
+  color: white;
+}

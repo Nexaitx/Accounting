@@ -1,0 +1,368 @@
+<div class="container py-5">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">
+            Simple, transparent pricing plans for <br>
+            Bookkeeping, Tax, CFO, and COO services
+        </h2>
+    </div>
+
+    <!-- Tabs -->
+    <div class="d-flex justify-content-center mb-4">
+        <div class="btn-group bg-light p-1 rounded-pill">
+
+            <button class="btn px-4" [ngClass]="activeTab === 'bookkeeping' ? 'btn-primary' : 'btn-light'"
+                (click)="setTab('bookkeeping')">
+                Bookkeeping
+            </button>
+
+            <button class="btn px-4" [ngClass]="activeTab === 'tax' ? 'btn-primary' : 'btn-light'"
+                (click)="setTab('tax')">
+                Tax
+            </button>
+
+            <button class="btn px-4" [ngClass]="activeTab === 'cfo' ? 'btn-primary' : 'btn-light'"
+                (click)="setTab('cfo')">
+                CFO
+            </button>
+
+            <button class="btn px-4" [ngClass]="activeTab === 'coo' ? 'btn-primary' : 'btn-light'"
+                (click)="setTab('coo')">
+                COO
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Toggle -->
+    @if (activeTab === 'bookkeeping') {
+    <div class="text-center mb-5 d-flex justify-content-center align-items-center">
+        <span class="me-2">Monthly</span>
+        <div class="form-check form-switch d-inline-block">
+            <input class="form-check-input" type="checkbox">
+        </div>
+        <span class="ms-2">Annually</span>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="row g-4">
+
+        <!-- Essentials -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h4 class="fw-bold">Essentials</h4>
+                    <h3 class="fw-bold">$99 <small class="text-muted fs-6">/month</small></h3>
+                    <p class="text-muted">Up to $10,000 in monthly expenses</p>
+
+                    <ul class="list-unstyled mt-3">
+                        <li>✔ Cash-basis bookkeeping</li>
+                        <li>✔ Standard chart of accounts</li>
+                        <li>✔ Year-end tax prep</li>
+                        <li>✔ Support messaging</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <button class="btn btn-primary w-100 rounded-pill">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow border-primary">
+                <div class="card-body">
+                    <h4 class="fw-bold">Core</h4>
+                    <h3 class="fw-bold">$299 <small class="text-muted fs-6">/month</small></h3>
+                    <p class="text-muted">Billed annually</p>
+
+                    <ul class="list-unstyled mt-3">
+                        <li>✔ Everything in Essentials</li>
+                        <li>✔ Dedicated bookkeeper</li>
+                        <li>✔ Cash or accrual accounting</li>
+                        <li>✔ Custom chart of accounts</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <button class="btn btn-primary w-100 rounded-pill">CONTACT SALES</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h4 class="fw-bold">Custom</h4>
+                    <p class="text-muted">
+                        Best for growing companies that need a customized plan.
+                    </p>
+
+                    <ul class="list-unstyled mt-3">
+                        <li>✔ Everything in Core</li>
+                        <li>✔ Advanced workflows</li>
+                        <li>✔ Reports on 6th business day</li>
+                        <li>✔ Payroll + CFO advisory</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <button class="btn btn-primary w-100 rounded-pill">CONTACT SALES</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    }
+    <div *ngIf="activeTab === 'tax'" class="container">
+
+        <div class="row g-4">
+
+            <!-- Single Member LLC -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5>For Single Member LLCs</h5>
+                        <h3 class="fw-bold">$1,000+ <small>/year</small></h3>
+                        <p class="text-muted">billed annually</p>
+
+                        <ul class="list-unstyled text-start mt-3">
+                            <li>✔ Free tax extension</li>
+                            <li>✔ Federal income tax filing</li>
+                            <li>✔ State income tax filing</li>
+                            <li>✔ Quarterly payments</li>
+                            <li>✔ Schedule C</li>
+                            <li>✔ Email support</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partnerships -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow border-primary">
+                    <div class="card-body text-center">
+                        <h5>For Partnerships and S-Corps</h5>
+                        <h3 class="fw-bold">$2,000+ <small>/year</small></h3>
+                        <p class="text-muted">billed annually</p>
+
+                        <ul class="list-unstyled text-start mt-3">
+                            <li>✔ Free extension</li>
+                            <li>✔ Federal tax filing</li>
+                            <li>✔ State filing</li>
+                            <li>✔ Franchise tax filing</li>
+                            <li>✔ 1099-NEC filings</li>
+                            <li>✔ Email support</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C-Corps -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5>For C-Corps</h5>
+                        <h3 class="fw-bold">$2,450+ <small>/year</small></h3>
+                        <p class="text-muted">billed annually</p>
+
+                        <ul class="list-unstyled text-start mt-3">
+                            <li>✔ Free extension</li>
+                            <li>✔ Federal filing</li>
+                            <li>✔ State filing</li>
+                            <li>✔ Franchise tax</li>
+                            <li>✔ 1099 filings</li>
+                            <li>✔ Email support</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div *ngIf="activeTab === 'coo'" class="container">
+        <div class="row g-4">
+
+            <!-- Starter -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4>Starter</h4>
+                        <h3 class="fw-bold">$750 <small>one-time</small></h3>
+
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Business incorporation</li>
+                            <li>✔ Banking setup</li>
+                            <li>✔ Payroll setup</li>
+                            <li>✔ Bookkeeping system</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Essentials -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow border-primary">
+                    <div class="card-body">
+                        <h4>Essentials</h4>
+                        <h3 class="fw-bold">$500 <small>/month</small></h3>
+
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Everything in Starter</li>
+                            <li>✔ Banking support</li>
+                            <li>✔ HR & payroll</li>
+                            <li>✔ Invoice collection</li>
+                            <li>✔ Bill payments</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4>Custom</h4>
+                        <p class="text-muted">Custom plans based on your business needs</p>
+
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Everything in Essentials</li>
+                            <li>✔ Invoice collection (high volume)</li>
+                            <li>✔ Bill payment automation</li>
+                            <li>✔ Payroll compliance</li>
+                            <li>✔ Advanced operations support</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div *ngIf="activeTab === 'cfo'" class="container">
+
+        <div class="text-center mb-5 d-flex justify-content-center align-items-center">
+            <span class="me-2">Monthly</span>
+            <div class="form-check form-switch d-inline-block">
+                <input class="form-check-input" type="checkbox">
+            </div>
+            <span class="ms-2">Annually</span>
+        </div>
+
+        <div class="row g-4">
+            <!-- Basic -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4>Basic</h4>
+                        <h3 class="fw-bold">$1,750 <small>/month</small></h3>
+                        <p class="text-muted">billed annually</p>
+
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Financial model</li>
+                            <li>✔ Budget vs actuals</li>
+                            <li>✔ Scenario planning</li>
+                            <li>✔ KPI dashboard</li>
+                            <li>✔ Monthly CFO call</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Essentials -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow border-primary">
+                    <div class="card-body">
+                        <h4>Essentials</h4>
+                        <h3 class="fw-bold">$3,150 <small>/month</small></h3>
+                        <p class="text-muted">billed annually</p>
+
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Everything in Basic</li>
+                            <li>✔ Cash runway optimization</li>
+                            <li>✔ Investor reporting</li>
+                            <li>✔ Fundraising support</li>
+                            <li>✔ Bi-weekly CFO call</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4>Custom</h4>
+                        <h3 class="fw-bold">$5,250 <small>/month</small></h3>
+                        <p class="text-muted">billed annually</p>
+
+                        <ul class="list-unstyled mt-3">
+                            <li>✔ Everything in Essentials</li>
+                            <li>✔ 13-week cash flow</li>
+                            <li>✔ Board presentations</li>
+                            <li>✔ Compensation planning</li>
+                            <li>✔ Weekly CFO calls</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            CONTACT SALES
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

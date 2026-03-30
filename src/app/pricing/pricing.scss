@@ -1,0 +1,22 @@
+.card {
+  border-radius: 16px;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #6f42c1, #5a32a3);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-group .btn {
+  border-radius: 50px !important;
+}
+
+.form-check-input {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
