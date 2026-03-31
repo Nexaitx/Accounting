@@ -30,87 +30,84 @@
     </div>
   </div>
 </div>
-
-<nav class="navbar navbar-expand-lg navbar ftco_navbar ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-light ftco-navbar-light" id="ftco-navbar">
   <div class="container">
-
-    <!-- Brand -->
     <a class="navbar-brand" href="#">Accounting</a>
 
-    <!-- Toggle button -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav"
       aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
     </button>
 
-    <!-- Navbar content -->
     <div class="collapse navbar-collapse" id="ftco-nav">
-
-      <!-- Center menu -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
-        <li class="nav-item"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          <a class="nav-link" routerLink="home">Home</a>
+        
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link" routerLink="home" (click)="closeNavbar()">Home</a>
         </li>
+        
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="/about-us">About</a>
+          <a class="nav-link" routerLink="/about-us" (click)="closeNavbar()">About</a>
         </li>
 
-        <li class="nav-item dropdown position-relative" routerLinkActive="active">
-
-          <a class="nav-link fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+        <li class="nav-item dropdown position-relative">
+          <a class="nav-link fw-bold dropdown-toggle" 
+             href="javascript:void(0)" 
+             id="servicesDropdown" 
+             role="button" 
+             data-bs-toggle="dropdown">
             Services
           </a>
 
-          <!-- Custom Dropdown -->
-          <div class="dropdown-menu custom-dropdown p-4 shadow border-0">
-
-            <div class="service-item" routerLink="/services/bookkeeping" routerLinkActive="active">
+          <div class="dropdown-menu custom-dropdown p-4 shadow border-0" aria-labelledby="servicesDropdown">
+            <div class="service-item" routerLink="/services/bookkeeping" (click)="closeNavbar()">
               <div class="icon blue"><i class="fas fa-book-open"></i></div>
               <span>Bookkeeping</span>
             </div>
 
-            <div class="service-item" routerLink="/services/cfo-advisory" routerLinkActive="active">
+            <div class="service-item" routerLink="/services/cfo-advisory" (click)="closeNavbar()">
               <div class="icon orange"><i class="fas fa-chart-bar"></i></div>
               <span>CFO Advisory</span>
             </div>
 
-            <div class="service-item" routerLink="/services/payroll-hr" routerLinkActive="active">
+            <div class="service-item" routerLink="/services/payroll-hr" (click)="closeNavbar()">
               <div class="icon green"><i class="fas fa-users"></i></div>
               <span>Payroll & HR</span>
             </div>
 
-            <div class="service-item" routerLink="/services/tax" routerLinkActive="active">
+            <div class="service-item" routerLink="/services/tax" (click)="closeNavbar()">
               <div class="icon gray"><i class="fas fa-university"></i></div>
               <span>Tax</span>
             </div>
 
-            <!-- Sub item -->
-            <div class="sub-item ms-5" routerLink="/services/rd-tax-credit"  routerLinkActive="active">
+            <div class="sub-item" routerLink="/services/rd-tax-credit" (click)="closeNavbar()">
               R & D Tax Credit
             </div>
 
-            <div class="service-item" routerLink="/services/back-office"  routerLinkActive="active">
+            <div class="service-item" routerLink="/services/back-office" (click)="closeNavbar()">
               <div class="icon blue"><i class="fas fa-network-wired"></i></div>
               <span>Back-Office</span>
             </div>
-
           </div>
+        </li>
 
-        </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="/pricing">Pricing</a>
+          <a class="nav-link" routerLink="/pricing" (click)="closeNavbar()">Pricing</a>
         </li>
+
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="/case-study">Case Study</a>
+          <a class="nav-link" routerLink="/case-study" (click)="closeNavbar()">Case Study</a>
         </li>
+
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="/blogs">Blog</a>
+          <a class="nav-link" routerLink="/blogs" (click)="closeNavbar()">Blog</a>
         </li>
+
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="/contact-us">Contact</a>
+          <a class="nav-link" routerLink="/contact-us" (click)="closeNavbar()">Contact</a>
         </li>
+
       </ul>
-
     </div>
   </div>
 </nav>

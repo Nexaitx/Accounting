@@ -1,22 +1,56 @@
-.custom-dropdown {
-  width: 320px;
-  border-radius: 16px;
-  background: #fff;
-  top: 120%;
-  left: 0;
+/* --- Desktop Only (Large screens) --- */
+@media (min-width: 992px) {
+  .custom-dropdown {
+    width: 320px;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    display: none;
+    z-index: 1000;
+  }
+  
+  /* Show dropdown on toggle (Bootstrap class) */
+  .custom-dropdown.show {
+    display: block;
+  }
+
+  .custom-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+  }
 }
 
-/* Triangle pointer */
-.custom-dropdown::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 40px;
-  border-width: 0 10px 10px 10px;
-  border-style: solid;
-  border-color: transparent transparent white transparent;
+/* --- Mobile Only (Small screens) --- */
+@media (max-width: 991.98px) {
+  .custom-dropdown {
+    position: static; /* Pushes other menu items down when expanded */
+    width: 100%;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 10px 0 !important;
+    background: #fcfcff; /* Light background to distinguish it */
+    display: none;
+  }
+
+  .custom-dropdown.show {
+    display: block;
+  }
+
+  .service-item {
+    padding: 12px 15px !important;
+  }
+  
+  .sub-item {
+    padding-left: 70px !important;
+  }
 }
 
+/* --- General Styles --- */
 .service-item {
   display: flex;
   align-items: center;
@@ -27,25 +61,17 @@
   transition: 0.3s;
 }
 
-.service-item:hover {
-  background: #f5f5ff;
-}
+.service-item:hover { background: #f5f5ff; }
+.service-item span { font-size: 18px; font-weight: 500; color: #4b3f72; }
 
-.service-item span {
-  font-size: 18px;
-  font-weight: 500;
-  color: #4b3f72;
-}
-
-/* Icons */
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 40px; height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  flex-shrink: 0;
 }
 
 .icon.blue { background: #6c8cff; }
@@ -53,10 +79,10 @@
 .icon.green { background: #2ecc71; }
 .icon.gray { background: #bdc3c7; }
 
-/* Sub item */
 .sub-item {
   font-size: 16px;
   color: #6c63ff;
   padding-left: 55px;
   margin-top: -5px;
+  cursor: pointer;
 }

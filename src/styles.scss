@@ -52,7 +52,7 @@ a {
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $primary;
+    color: $primary !important;
     outline: none !important;
   }
 }
